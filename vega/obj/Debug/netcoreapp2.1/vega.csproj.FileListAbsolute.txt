@@ -1,0 +1,14 @@
+F:\vega\vega\bin\Debug\netcoreapp2.1\vega.dll
+F:\vega\vega\bin\Debug\netcoreapp2.1\vega.pdb
+F:\vega\vega\bin\Debug\netcoreapp2.1\vega.deps.json
+F:\vega\vega\bin\Debug\netcoreapp2.1\vega.runtimeconfig.json
+F:\vega\vega\bin\Debug\netcoreapp2.1\vega.runtimeconfig.dev.json
+F:\vega\vega\obj\Debug\netcoreapp2.1\vega.csproj.CoreCompileInputs.cache
+F:\vega\vega\obj\Debug\netcoreapp2.1\vega.RazorAssemblyInfo.cache
+F:\vega\vega\obj\Debug\netcoreapp2.1\vega.RazorAssemblyInfo.cs
+F:\vega\vega\obj\Debug\netcoreapp2.1\vega.AssemblyInfoInputs.cache
+F:\vega\vega\obj\Debug\netcoreapp2.1\vega.AssemblyInfo.cs
+F:\vega\vega\obj\Debug\netcoreapp2.1\vega.RazorTargetAssemblyInfo.cache
+F:\vega\vega\obj\Debug\netcoreapp2.1\vega.dll
+F:\vega\vega\obj\Debug\netcoreapp2.1\vega.pdb
+F:\vega\vega\obj\Debug\netcoreapp2.1\vega.csprojAssemblyReference.cache
