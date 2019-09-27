@@ -12,7 +12,7 @@ using vega.Dtos;
 using vega.Models;
 using vega.Persistence;
 
-namespace vega.Controllers 
+namespace vega.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,7 +23,7 @@ namespace vega.Controllers
         private readonly IConfiguration _config;
 
         public AuthController(IAuthRepository repo, IConfiguration config)
-        { 
+        {
             _repo = repo;
             _config = config;
         }
@@ -48,6 +48,8 @@ namespace vega.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
+          //  throw new Exception("Computer says no");
+
             var userFromRepo = await _repo.Login(userForLoginDto.Username, userForLoginDto.Password);
 
             if (userFromRepo == null)
@@ -81,8 +83,8 @@ namespace vega.Controllers
             });
 
         }
-       
 
-        
+
+
     }
 }
