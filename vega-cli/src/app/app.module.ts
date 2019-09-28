@@ -1,3 +1,4 @@
+import { AuthGuard } from './_guards/auth.guard';
 import { AlertifyService } from './_services/alertify.service';
 import { AuthService } from './_services/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +15,9 @@ import { NavComponent } from './nav/nav.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import {  ErrorInterceptorProvider } from './_services/error.interceptor';
+import { MessagesComponent } from './messages/messages.component';
+import { MemberListComponent } from './member-list/member-list.component';
+import { ListsComponent } from './lists/lists.component';
 
 
 @NgModule({
@@ -22,7 +26,10 @@ import {  ErrorInterceptorProvider } from './_services/error.interceptor';
       ValueComponent,
       NavComponent,
       RegisterComponent,
-      HomeComponent
+      HomeComponent,
+      MessagesComponent,
+      MemberListComponent,
+      ListsComponent
    ],
    imports: [
       BrowserModule,
@@ -34,7 +41,8 @@ import {  ErrorInterceptorProvider } from './_services/error.interceptor';
    providers: [
       AuthService,
       ErrorInterceptorProvider,
-      AlertifyService
+      AlertifyService,
+      AuthGuard
    ],
    bootstrap: [
       AppComponent
