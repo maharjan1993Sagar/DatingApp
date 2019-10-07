@@ -25,7 +25,7 @@ namespace vega.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet("/api/users")]
         public async Task<IActionResult> GetUsers()
         {
             var users = await _repo.GetUsers();
@@ -34,8 +34,8 @@ namespace vega.Controllers
 
             return Ok(usersToReturn);
         }
-
-        [HttpGet("{id}")]
+        
+        [HttpGet("/api/users/{id}")]
         public async Task<IActionResult> GetUser(int id)
         {
             var user = await _repo.GetUser(id);
