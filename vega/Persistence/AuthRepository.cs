@@ -17,7 +17,7 @@ namespace vega.Persistence
         }
         public async Task<User> Login(string username, string password)
         {
-            var user= await context.Users.FirstOrDefaultAsync(a => a.Username == username);
+            var user= await context.Users.Include(p=>p.Photos).FirstOrDefaultAsync(a => a.Username == username);
 
             if (user == null)
                 return null;

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -22,10 +23,13 @@ namespace vega.Controllers
 
         private readonly IConfiguration _config;
 
-        public AuthController(IAuthRepository repo, IConfiguration config)
+        private readonly IMapper _mapper;
+
+        public AuthController(IAuthRepository repo, IConfiguration config, IMapper mapper)
         {
             _repo = repo;
             _config = config;
+            _mapper = mapper;
         }
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
@@ -77,9 +81,12 @@ namespace vega.Controllers
 
             var token = tokenHandler.CreateToken(tokenDescrrptor);
 
+            var user = _mapper.Map<UserForListDto>(userFromRepo);
+
             return Ok(new
             {
-                token = tokenHandler.WriteToken(token)
+                token = tokenHandler.WriteToken(token),
+                user
             });
 
         }
