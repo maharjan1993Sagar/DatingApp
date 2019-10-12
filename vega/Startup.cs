@@ -61,6 +61,7 @@ namespace vega
 
                     };
                 });
+            services.AddScoped<LogUserActivity>();
              
         }
 
