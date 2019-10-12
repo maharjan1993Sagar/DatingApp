@@ -36,7 +36,7 @@ namespace vega.Controllers
             return Ok(usersToReturn);
         }
         
-        [HttpGet("/api/users/{id}")]
+        [HttpGet("/api/users/{id}",Name ="GetUser")]
         public async Task<IActionResult> GetUser(int id)
         {
             var user = await _repo.GetUser(id);

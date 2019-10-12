@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/_models/user';
 import { ActivatedRoute } from '@angular/router';
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
   selector: 'app-member-detail',
@@ -16,7 +17,7 @@ galleryOptions: NgxGalleryOptions[];
 galleryImages: NgxGalleryImage[];
 
   constructor(private userService: UserService, private alertify: AlertifyService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute, private authService: AuthService) { }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
@@ -49,7 +50,6 @@ galleryImages: NgxGalleryImage[];
     return imageUrls;
   }
 
- 
 
 
   // loadUser() {
