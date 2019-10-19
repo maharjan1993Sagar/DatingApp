@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",//"node",
+            "request": "launch",
+            "name": "Launch chrome against localhost",
+            "url":"http://localhost:4200",
+            "webRoot":"${workspaceFolder}"//"Build Project",
+            // "program": "${file}",//"${workspaceFolder}\\src\\app\\app.component.ts",
+            // "preLaunchTask": "npm: build",
+            // "sourceMaps": true,
+            // "smartStep": true,
+            // "internalConsoleOptions": "openOnSessionStart",
+            // "outFiles": [
+            //   "${fileDirname}/*.js" // "${workspaceFolder}/out/**/*.js"
+            // ]
+        }
+    ]
+}
